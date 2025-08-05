@@ -1,11 +1,26 @@
-# [Introduction to Databases](https://www.digitalocean.com/community/conceptual-articles/an-introduction-to-databases)
+<div align="center">
+    <a href="https://skywalkerSam.dev">
+        <img src="https://github.com/starboy-inc.png" alt="Starboy Logo" height=128>
+    </a>
+    <h1><a href="https://en.wikipedia.org/wiki/Database">Database</a> 101</h1>
+    introduction to Databases...
+</div>
 
-- Structured Query Language (*SQL*)
-- Database Management System (*DBMS*)
-- Initially, Structured English Query Language (*SEQUEL*)
-- Developed in the *1970s*
+&nbsp;
 
-## Relational Databases (*RDBMS*)
+# Basics
+
+- Developed in the _1970s_
+
+- initially, Structured English Query Language (_SEQUEL_)
+
+- Database Management System (_DBMS_)
+
+- Structured Query Language (_SQL_)
+
+&nbsp;
+
+## Relational Databases (_RDBMS_)
 
 `SQL`
 
@@ -24,7 +39,9 @@
 - HyperSQL
 - TERADATA
 
-## *Non-Relational* Databases
+&nbsp;
+
+## _Non-Relational_ Databases
 
 `NoSQL`
 
@@ -37,6 +54,8 @@
 - Cassandra
 - riak
 - MongoDB, Document Oriented - (MongoDB Query Language)
+
+&nbsp;
 
 ## [SQL Data Types](https://www.digitalocean.com/community/tutorials/sql-data-types)
 
@@ -79,25 +98,27 @@
 - json
 - xml
 
-## Getting started with *PostgreSQL* (`psql`)
+&nbsp;
+
+## Getting started with _PostgreSQL_ (`psql`)
 
 - Windows w/ **WSL**
-- [DBeaver](https://dbeaver.io/download/) as *DBMS*
+- [DBeaver](https://dbeaver.io/download/) as _DBMS_
 <!-- - Or, just use [VS Code](https://code.visualstudio.com/) for everything... lol ;) -->
 
-## Installing w/ *winget*
+### installation w/ _winget_
 
 ```shell
 winget install dbeaver.dbeaver
 ```
 
-## *APT*
+### _APT_
 
 ```shell
 sudo apt install postgresql
 ```
 
-## Start *postgresql*
+### Start _postgresql_
 
 ```shell
 sudo systemctl start postgresql
@@ -107,7 +128,7 @@ sudo systemctl start postgresql
 - `status`
 - `restart`
 
-## Log in as *root:* `postgres`
+### Log in as _root:_ `postgres`
 
 ```shell
 sudo su - postgres
@@ -117,39 +138,39 @@ sudo su - postgres
 psql -U postgres
 ```
 
-## Create a db
+### Create a db
 
 ```shell
 createdb test
 ```
 
-## Alter db
+### Alter db
 
-- *user/password/etc.*
+- _user/password/etc._
 
 ```shell
 ALTER USER username WITH PASSWORD 'new_password';
 ```
 
-## New db user
+### New db user
 
 ```shell
 CREATE USER starboy WITH PASSWORD 'helloworld...lol';
 ```
 
-## Log In
+### Log In
 
 ```shell
 psql -h localhost -U postgres -d test
 ```
 
-## Create a new db
+### Create a new db
 
 ```shell
 CREATE DATABASE test;
 ```
 
-## List available dbs
+### List available dbs
 
 ```shell
 \list
@@ -159,13 +180,13 @@ CREATE DATABASE test;
 \l
 ```
 
-## List all users
+### List all users
 
 ```shell
 \du
 ```
 
-## Clear
+### Clear
 
 ```shell
 \! clear
@@ -173,7 +194,9 @@ CREATE DATABASE test;
 
 Yes, there's a space before `clear`
 
-## Create a *table*
+&nbsp;
+
+## Create a _table_
 
 ```shell
 CREATE TABLE table_name (column_1 datatype, column_2 datatype, column_3 datatype);
@@ -188,13 +211,13 @@ create table users (name text, age smallint, birthday date);
 - Semicolon ( `;` ) at the end of the syntax is `Important`!
 - `CTRL+C`
 
-## List all *tables*
+### List all _tables_
 
 ```shell
 \d
 ```
 
-## Insert into a *table*
+### Insert into a _table_
 
 ```shell
 INSERT INTO table_name(column_1, column_2, column_3) VALUES (value_1, value_2, value_3);
@@ -204,7 +227,7 @@ INSERT INTO table_name(column_1, column_2, column_3) VALUES (value_1, value_2, v
 insert into users(name, age, birthday) values ('Sam', 3000, '2049-12-31');
 ```
 
-## Select from a *table*
+### Select from a _table_
 
 ```shell
 SELECT name, age, birthday FROM users;
@@ -212,7 +235,9 @@ SELECT name, age, birthday FROM users;
 
 <!-- `Tip:` Use Up & Down Arrow Keys to move through used commands in console. -->
 
-## Frequently used *commands*
+&nbsp;
+
+## Frequently used _commands_
 
 ```shell
 select * from table_name;
@@ -220,40 +245,40 @@ select * from table_name;
 
 - Wildcard ( `*` )
 
-## Alter *table*
+### Alter _table_
 
 ```shell
 ALTER TABLE table_name ADD column_name datatype;
 ```
 
-## Update value w/ *conditions*
+### Update value w/ _conditions_
 
 ```shell
 UPDATE table_name SET column_name = value WHERE column_identifier = column_value;
 ```
 
-## *AND* | *OR*
+### _AND_ | _OR_
 
 ```shell
 update users set score=0 where name='Sam' or name='Starboy';
 ```
 
-## Filter *data*
+### Filter _data_
 
 - `case-sensitive`
-- `%` = whatever*
+- `%` = whatever\*
 
 ```shell
 SELECT * FROM table_name WHERE column_name LIKE 'A%';
 ```
 
-## *vice-versa*
+### _vice-versa_
 
 ```shell
 select * from users where name like '%a';
 ```
 
-## Sorting through *data*
+### Sorting through _data_
 
 - Descending order
 
@@ -261,13 +286,15 @@ select * from users where name like '%a';
 SELECT * FROM table_name ORDER BY column_name DESC;
 ```
 
-## *vice-versa* (Ascending Order.)
+### _vice-versa_ (Ascending Order.)
 
 ```shell
 select * from users order by score asc;
 ```
 
-## SQL *functions* ()
+&nbsp;
+
+## SQL _functions_ ()
 
 - `AVG()`
 
@@ -287,9 +314,11 @@ SELECT SUM(column_name) FROM table_name;
 SELECT COUNT(column_name) FROM table_name;
 ```
 
-## Join *tables*
+&nbsp;
 
-- *auto-incrementing* IDs
+## Join _tables_
+
+- _auto-incrementing_ IDs
 
 ```shell
 CREATE TABLE login(
@@ -299,40 +328,44 @@ CREATE TABLE login(
 );
 ```
 
-## Insert into *tables*
+### Insert into _tables_
 
 ```shell
 INSERT INTO login (secret,name) VALUES ('xyz', 'Sam');
 ```
 
-## Read *table*
+### Read _table_
 
 ```shell
  select * from login;
 ```
 
-## Joining *users* w/ *login*
+### Joining _users_ w/ _login_
 
 The real power of Relational Databases.
 
-- *Schemas*
-- Separation of concerns*
+- _Schemas_
+- Separation of concerns\*
 
 ```shell
 SELECT * FROM table_1 JOIN table_2 ON table_1.identifier = table_2.identifier;
 ```
 
-Here, *Sam* is a foreign key in *login* and in users, *Sam* is a primary key
+Here, _Sam_ is a foreign key in _login_ and in users, _Sam_ is a primary key
 
 ```shell
 select * from users join login on users.name = login.name;
 ```
 
-## Delete from *table*
+&nbsp;
+
+## Delete from _table_
 
 ```shell
 DELETE FROM table_name WHERE column='Something';
 ```
+
+&nbsp;
 
 ## Drop Table `!`
 
@@ -342,11 +375,15 @@ DELETE FROM table_name WHERE column='Something';
 DROP TABLE table_name;
 ```
 
+&nbsp;
+
 <img src="./Resources/Memes/drop_database_prod.jpg" width=450>
 
-`Tip:` Don't play with *prod* environments!
+`Tip:` Don't play with _prod_ environments!
 
 <!-- ![*Intern after deleting the production database*](./Resources/Memes/drop_database_prod.jpg) -->
+
+&nbsp;
 
 ## Drop Database `!`
 
@@ -358,7 +395,7 @@ DROP DATABASE database_name;
 
 You can't drop the db you're currently logged in!
 
-## List available *dbs*
+## List available _dbs_
 
 - `\list`
 
@@ -366,17 +403,13 @@ You can't drop the db you're currently logged in!
 \l
 ```
 
-## Setting up a database from scratch - *DEMO*
-
-- Part of the `face-detection backend` project
-
-## Create a database `prod`
+## Create a new database `prod`
 
 ```shell
 CREATE DATABASE prod;
 ```
 
-## Give database a structure: `users`
+### Give database a structure: `users`
 
 ```shell
 CREATE TABLE users (
@@ -388,13 +421,13 @@ CREATE TABLE users (
 );
 ```
 
-## Verify Creation
+### Verify Creation
 
 ```shell
 \d
 ```
 
-## Database: login
+### Database: login
 
 ```shell
 CREATE TABLE login (
@@ -404,19 +437,22 @@ CREATE TABLE login (
 );
 ```
 
-## Verify.)
+### Verify.)
 
 ```shell
 select * from login;
 ```
 
-## Clear screen
+### Clear screen
 
 ```shell
 \! clear
 ```
-<!-- 
+
+<!--
 Use a framework like [knex](https://knexjs.org/) or, [pg-promise](https://vitaly-t.github.io/pg-promise/) to connect backend with the database... -->
+
+&nbsp;
 
 ## PostgreSQL `Info`
 
@@ -428,6 +464,8 @@ psql --version
 psql -V
 ```
 
+&nbsp;
+
 ## Help!?
 
 ```shell
@@ -438,31 +476,14 @@ psql --help
 man psql
 ```
 
+&nbsp;
+
 Here's something...
-
-<!-- ![How did they program a programming language to program a program to program programs?](./Resources/Memes/the_program_paradox.jpg) -->
-
-<!-- 
-## Project Specific Details: `face-detection-backend`
-
-- Using [VS Code](https://code.visualstudio.com/) for this, and for all other projects, for all times... It's the best `:)`
-
-- Using [React.js](https://react.dev/) with [create-react-app](https://create-react-app.dev/), but [vite](https://vitejs.dev/) is the best.
-
-- Using [Express.js](https://expressjs.com/) for backend
-
-- Using [npm](https://www.npmjs.com/) instead of [yarn](https://yarnpkg.com/)... idk ;)
-
-- Using [Postman](https://www.postman.com/) for endpoints testing ([APIs](https://www.postman.com/what-is-an-api/))
-
-- Using [PostgreSQL](https://www.postgresql.org/) on [WSL/Ubuntu](https://learn.microsoft.com/en-us/windows/wsl/)
-
-- Using [DBeaver](https://dbeaver.io/) for database management
-
-- Using [knex](https://knexjs.org/), but [pg-promise](https://vitaly-t.github.io/pg-promise/) is good too.
-
-- Using [Pycharm](https://www.jetbrains.com/pycharm/) to write is [Markdown](https://www.markdownguide.org/) file for some reason... Use [ghostwriter](https://ghostwriter.kde.org/download/#windows) ;) -->
 
 <img src="./Resources/Memes/the_program_paradox.jpg" width=450>
 
-Until next time.)
+&nbsp;
+
+Until Next Time...✌️
+
+&nbsp;
