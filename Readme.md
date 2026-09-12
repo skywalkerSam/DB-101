@@ -70,7 +70,54 @@ _Code editors_ focus primarily on the **text contents** of the _file_, whereas t
 
 ## Bash Fundamentals
 
+### The Command Line
+
+it is **a basic text input interface** which allows a user to enter "_commands_", usually in the form of a series of _characters_, and submit or execute them, usually by pressing the `Enter` key.
+
+- Command line interfaces usually exist within a terminal.
+
+### Terminal
+
+it is **a special application that offers a command line interface** to perform _system-level_ commands beyond the basic _read/write_ operations.
+
+- Windows
+  - Microsoft Terminal
+
+- Mac
+  - Terminal
+  - iTerm2
+
+- Linux
+  - gnome-terminal
+  - ptyxis
+  - yakuake
+
+
+### Terminal Emulators
+
+These are applications that **wrap a basic terminal interface** to offer **additional features** and **functionalities**.
+
+- kitty
+- terminator
+- tmux (multiplexer)
+- Ghostty
+
+### Shell
+
+it is the software that **wraps the command line**, **interprets the inputs as commands**, and **returns the output**.
+
+- Powershell
+- bash
+- zsh
+- fish
+
 &nbsp;
+
+`Note`: All these terms are used interchangibily.)
+
+&nbsp;
+
+## Keyboard Shortcuts
 
 &nbsp;
 
