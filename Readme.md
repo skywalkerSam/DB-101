@@ -117,11 +117,75 @@ it is the software that **wraps the command line**, **interprets the inputs as c
 
 &nbsp;
 
-## Keyboard Shortcuts
+## Basic Keyboard Shortcuts
+
+For _Linux_ and _macOS_, which can both trace their roots to **Unix**, many of these shortcuts will be the same. 
+
+But for _Windows_, there will be some differences.
 
 &nbsp;
 
+### Arrow Keys
+
+These two keys (_Up Arrow key_ & _Down Arrow key_) allow you to quickly **cycle through the commands you've previously run**.
+
+- To run the **last executed command** once again, use two exclamation points (`!!`).
+
+- To run a specfic _command_ you've executed in the past, type `history`, and run the number associated with that paticular _command_ along with one exclamation point (`!`).
+
+  - `!6`
+  - `!9`
+  - `!69`
+
 &nbsp;
+
+### The `Tab` Key
+
+The `Tab` key can be used to **fill in the rest of the suggestion**, quickly populating your command line with the full syntax.
+
+However, suggestions will vary from shell to shell.
+
+  - if you're using `zsh`, you can install `zsh-autosuggestions` for better suggestions.
+
+&nbsp;
+
+### `Control + L`
+
+To clear the terminal.
+
+You can also type `clear` to clear the terminal.
+
+- if you're using _command prompt_ for some reason, you can type `cls` to clear the screen.
+
+&nbsp;
+
+### `Control + C`
+
+This will **terminate execution** of the currently running _command_ and create a _new prompt_.
+
+- For _PowerShell_ users, `Control + C` is also used to copy text - and will only work to terminate a process when the context is not ambiguous (such as when there is no text selected to copy).
+
+`NOTE`: inside _linux_ terminals, you must use `Control + Shift + C` to **copy text** from the terminal to the clipboard. And `Control + Shift + V` to paste.
+
+&nbsp;
+
+### `Control + Z` & `fg` (*nix based terminals only)
+
+There may be times when you need to _multitask_, allowing a process or command to run in the background while you work on another. 
+
+Pressing `Control + Z` places the current process in a background task and returns you to the command line, where you can continue your work. 
+
+When you need to shift focus back to the background task, you can use `fg` to restore it.
+
+  - However, in some operating systems like _fedora_, it tends to **suspend** the process insted.
+
+&nbsp;
+
+For more shortcuts, read the documentation for your particular OS & application.
+
+&nbsp;
+
+## Basic Bash Commands
 
 &nbsp;
 
