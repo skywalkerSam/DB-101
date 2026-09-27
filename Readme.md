@@ -179,7 +179,15 @@ When you need to shift focus back to the background task, you can use `fg` to re
 
 &nbsp;
 
-For more shortcuts, read the documentation for your particular OS & application.
+### `Control + D`
+
+To exit the terminal.
+
+- Or you can just type `exit`
+
+&nbsp;
+
+For more shortcuts, read the documentation for your particular OS/Application.
 
 &nbsp;
 
