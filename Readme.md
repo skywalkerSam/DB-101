@@ -92,7 +92,6 @@ it is **a special application that offers a command line interface** to perform 
   - ptyxis
   - yakuake
 
-
 ### Terminal Emulators
 
 These are applications that **wrap a basic terminal interface** to offer **additional features** and **functionalities**.
@@ -119,7 +118,7 @@ it is the software that **wraps the command line**, **interprets the inputs as c
 
 ## Basic Keyboard Shortcuts
 
-For _Linux_ and _macOS_, which can both trace their roots to **Unix**, many of these shortcuts will be the same. 
+For _Linux_ and _macOS_, which can both trace their roots to **Unix**, many of these shortcuts will be the same.
 
 But for _Windows_, there will be some differences.
 
@@ -132,7 +131,6 @@ These two keys (_Up Arrow key_ & _Down Arrow key_) allow you to quickly **cycle 
 - To run the **last executed command** once again, use two exclamation points (`!!`).
 
 - To run a specfic _command_ you've executed in the past, type `history`, and run the number associated with that paticular _command_ along with one exclamation point (`!`).
-
   - `!6`
   - `!9`
   - `!69`
@@ -145,7 +143,7 @@ The `Tab` key can be used to **fill in the rest of the suggestion**, quickly pop
 
 However, suggestions will vary from shell to shell.
 
-  - if you're using `zsh`, you can install `zsh-autosuggestions` for better suggestions.
+- if you're using `zsh`, you can install `zsh-autosuggestions` for better suggestions.
 
 &nbsp;
 
@@ -169,15 +167,15 @@ This will **terminate execution** of the currently running _command_ and create 
 
 &nbsp;
 
-### `Control + Z` & `fg` (*nix based terminals only)
+### `Control + Z` & `fg` (\*nix based terminals only)
 
-There may be times when you need to _multitask_, allowing a process or command to run in the background while you work on another. 
+There may be times when you need to _multitask_, allowing a process or command to run in the background while you work on another.
 
-Pressing `Control + Z` places the current process in a background task and returns you to the command line, where you can continue your work. 
+Pressing `Control + Z` places the current process in a background task and returns you to the command line, where you can continue your work.
 
 When you need to shift focus back to the background task, you can use `fg` to restore it.
 
-  - However, in some operating systems like _fedora_, it tends to **suspend** the process insted.
+- However, in some operating systems like _fedora_, it tends to **suspend** the process insted.
 
 &nbsp;
 
@@ -186,6 +184,158 @@ For more shortcuts, read the documentation for your particular OS & application.
 &nbsp;
 
 ## Basic Bash Commands
+
+Bash stands for **Bourne Again SHell**, and is arguably the _most common shell_ you will encounter in _Unix-like_ environments.
+
+- `pwd`: Prints the **current working directory** to the terminal.
+  - The "working directory" refers to the directory the terminal is currently _pointed at_.
+
+- `cd`: Allows you to **change directories**.
+
+  ```bash
+  cd ./to-another-folder
+  ```
+
+  - The single dot(`.`) represents the current directory.
+
+  - You can use the double-dot (`..`) syntax to **move up to the parent** directory.
+
+  - You can use dash (`-`) to **go back** to the previous directory.
+
+  - You can specify an **absolute path**, prefixed with a forward slash (`/`)
+    - Or a **relative path** with _no prefix_.
+
+  - `~`: Represents the **home** folder.
+
+- `ls`: **Lists the contents** of your _current working directory_.
+  - `-a` Flag: To see **hidden files**.
+
+    ```bash
+    ls -a
+    ```
+
+  - `-l` Flag: To see **file permissions**.
+
+    ```bash
+    ls -l
+    ```
+
+    Or,
+
+    ```bash
+    ls -la
+    ```
+
+- `cat`: To **view the contents** of a file.
+
+  ```bash
+  cat Readme.md
+  ```
+
+- `mkdir`: **Creates a new directory**/folder.
+
+  ```bash
+  mkdir directory-one
+  ```
+
+- `touch`: **Creates a new file**.
+
+  ```bash
+  touch Readme.md
+  ```
+
+- `mv`: Allows you to **move a file _or_ directory** (_rename_).
+  - it takes the _old file name_ followed by the _new file name_.
+
+    ```bash
+    mv redme.md Readme.md
+    ```
+
+    Or,
+
+    ```bash
+    mv old-folder to-the-new-folder
+    ```
+
+- `cp`: To **copy a file _or_ directory** to a new location.
+  - it takes the _file name_ followed by _a path to the new location_.
+
+    ```bash
+    cp this-file ./to-this-folder
+    ```
+
+    Or,
+
+    ```bash
+    cp this-file ../to-a-parent-folder
+    ```
+
+  - `-r` flag: Sometimes, in order to _copy a directory_, you'll need to pass this flag.
+
+- `rm`: Allows you to **remove a file** (_delete_).
+
+  ```bash
+  rm Readme.md
+  ```
+
+  - `-r` Flag: **Removes a directory**.
+
+    ```bash
+    rm -r this-folder
+    ```
+
+  - `-f` Flag: Sometimes a _file_ or _folder_ _might be protected_, and you'll need to include this flag in order to remove a _file_ or _directory_.
+
+    `NOTE`: Use `rm -fr` **very carefully!!**
+
+- `echo`: Bash equivalent of a `console.log()` _or_ the `print()` function.
+  - it takes a _string argument_, wrapped in quotes, and prints it to the terminal.
+
+  - `>` Symbol: it allows you to _specify a filename_ to **create or overwrite with the new string**.
+
+    ```bash
+    echo "i, existed." > readme.md
+    ```
+
+    - `>>` Symbol: it will **append to the file**.
+
+- `man`: To see the **manual** for nearly any command.
+
+  ```bash
+  man whoami
+  ```
+
+  - Press `q` to quit.
+
+- `--help` Flag: For **quick help** with any command.
+
+  ```bash
+  whoami --help
+  ```
+
+&nbsp;
+
+### Command Options and Flags
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
